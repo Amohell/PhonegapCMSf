@@ -338,8 +338,7 @@ function getSrc(obj)
 }
 function initPage()
 {
-	alert("something");
-	document.getElementById('btnCount').click();
+//	document.getElementById('btnCount').click();
 	redirect();
 
 	}
