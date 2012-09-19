@@ -348,8 +348,7 @@ function redirect ()
 }
 function go_now ()   
 { 
-	url = "http://google.nl"
-	//url = localStorage['urlother'];
+	url = localStorage['urlother'];
 	alert(url);
 	window.location.href = url;
 }
