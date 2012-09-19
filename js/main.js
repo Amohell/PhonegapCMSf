@@ -10,6 +10,7 @@
     		 window.localStorage.setItem("url", localStorage['startpage']);
             
         }
+        alert(window.localStorage.getItem("url"));
         window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
         { showLocationBar: false }); 
 	}
@@ -348,6 +349,7 @@ function redirect ()
 }
 function go_now ()   
 { 
+	alert(window.localStorage.getItem("url"));
 	var url = window.localStorage.getItem("url");
 	window.location.href = url;
 }
