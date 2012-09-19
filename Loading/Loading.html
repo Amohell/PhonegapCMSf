@@ -14,41 +14,42 @@
   		 <script type="text/javascript" charset="utf-8" >
 			function loadPage()
 			{
-		//	document.getElementById('btnCount').click();
-		//		mySpan = document.getElementById('counterSpan');
-		//		if(mySpan!=null)
-		//		{
-		//			
-		//			var span_textnode = mySpan.firstChild;
-		//			if(span_textnode != null)
-		//			{
-		//				
-		//				var span_text = span_textnode.data;
-		//				
-		//			}
-		//			
-		//			
-		//		
-		//		
-		//		if(span_text != null)
-		//		{
-		//		
-		//			if(span_text == 1)
-		//			{	
+				alert("s");
+			document.getElementById('btnCount').click();
+			mySpan = document.getElementById('counterSpan');
+			if(mySpan!=null)
+			{
+					
+					var span_textnode = mySpan.firstChild;
+					if(span_textnode != null)
+					{
+						
+						var span_text = span_textnode.data;
+						
+					}
+					
+					
+				
+				
+				if(span_text != null)
+				{
+				
+					if(span_text == 1)
+					{	
 						url = localStorage['urlother'];
 						window.location.replace(url);
-		//			}
-		//			
-		//				
-		//			
-		//			}
-		//			if(span_text == null || span_text== 0 || span_text == "" || span_text == 1 || span_text == undefined)
-		//			{
-		//				
-		//				self.setInterval(function(){loadPage()},1000);
-		//				
-		//			}
-		//		}
+					}
+					
+						
+					
+					}
+					if(span_text == null || span_text== 0 || span_text == "" || span_text == 1 || span_text == undefined)
+					{
+						
+						self.setInterval(function(){loadPage()},1000);
+						
+					}
+				}
 			}	
 		
 			
@@ -56,7 +57,7 @@
 
 	</head>
     	
-    <body  onload="loadPage();">
+    <body onload="loadPage();">
 
         <div class="nimbleLoader"></div>
         <label for="counter"></label>
