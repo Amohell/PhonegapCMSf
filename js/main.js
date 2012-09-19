@@ -348,8 +348,8 @@ function redirect ()
 }
 function go_now ()   
 { 
-	url = localStorage['urlother'];
-	alert(url);
+	alert(localStorage['urlother']);
+	url = "http://klaasvaak.nl";
 	window.location.href = url;
 }
 				
