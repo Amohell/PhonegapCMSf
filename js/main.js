@@ -10,6 +10,7 @@
     		 localStorage['urlother'] = localStorage['startpage'];
             
         }
+        alert(localStorage['urlother']);
         window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
         { showLocationBar: false }); 
 	}
@@ -348,8 +349,7 @@ function redirect ()
 }
 function go_now ()   
 { 
-//	alert(localStorage['urlother']);
-	url = "http://klaasvaak.nl";
+	url = localStorage['urlother'];
 	window.location.href = url;
 }
 				
