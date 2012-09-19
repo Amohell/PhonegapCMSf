@@ -10,8 +10,8 @@
     		 window.localStorage.setItem("url", localStorage['startpage']);
             
         }
-        alert(window.localStorage.getItem("url"));
-        window.location.href = "file:///android_asset/www/Loading/Loading.html";
+    //    alert(window.localStorage.getItem("url"));
+    //    window.location.href = "file:///android_asset/www/Loading/Loading.html";
         window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
         { showLocationBar: false }); 
 	}
