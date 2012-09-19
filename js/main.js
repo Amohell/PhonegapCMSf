@@ -7,10 +7,9 @@
     {
     	if(sort == "start")
     	{
-    		 localStorage['urlother'] = localStorage['startpage'];
+    		 window.localStorage.setItem("url", localStorage['startpage']);
             
         }
-        alert(localStorage['urlother']);
         window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
         { showLocationBar: false }); 
 	}
@@ -18,27 +17,27 @@
     
     function loadSeneca()
 	{
-		localStorage['urlother'] = "http://seneca.nl";
+		window.localStorage.setItem("url", "http://ixpdev.smartsite.seneca.intern/Mgr/Add-Item");
 		showPage("other");
 	}
 	function addItem()
 	{
-		localStorage['urlother'] = "http://ixpdev.smartsite.seneca.intern/Mgr/Add-Item";
+		window.localStorage.setItem("url", "http://ixpdev.smartsite.seneca.intern/Mgr/Add-Item");
 		showPage("other");
 	}
 	function editItem()
 	{
-		localStorage['urlother'] = "http://ixpdev.smartsite.seneca.intern/Mgr/News-Library";
+		window.localStorage.setItem("url", "http://ixpdev.smartsite.seneca.intern/Mgr/Add-Item");
 		showPage("other");
 	}
 	function loadExtern()
 	{
-		localStorage['urlother'] = 'http://demo.smartsite.nl/Mgr/ManagerLogin' ;
+		window.localStorage.setItem("url", "http://ixpdev.smartsite.seneca.intern/Mgr/Add-Item");
 		showPage("other");
 	}
 	function loadExternalBrowser()
 	{
-		localStorage['urlother'] = 'http://demo.smartsite.nl/Mgr/ManagerLogin' ;
+		window.localStorage.setItem("url", "http://ixpdev.smartsite.seneca.intern/Mgr/Add-Item");
 		showPage("other");
 	}
 	function loadStartpage()
@@ -349,7 +348,7 @@ function redirect ()
 }
 function go_now ()   
 { 
-	url = localStorage['urlother'];
+	var url = window.localStorage.getItem("url");
 	window.location.href = url;
 }
 				
