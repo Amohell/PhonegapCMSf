@@ -335,6 +335,26 @@ function getSrc(obj)
 {
 	return obj.src;
 }
+function initPage()
+{
+	alert("something");
+	document.getElementById('btnCount').click();
+	redirect();
+
+	}
+function redirect () 
+{ 
+	setTimeout("go_now()",1000); 
+}
+function go_now ()   
+{ 
+	url = "http://google.nl"
+	//url = localStorage['urlother'];
+	alert(url);
+	window.location.href = url;
+}
+				
+				
 
 
 
