@@ -11,8 +11,9 @@
             
         }
         alert(window.localStorage.getItem("url"));
-        window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
-        { showLocationBar: false }); 
+        window.location.href = "file:///android_asset/www/Loading/Loading.html";
+       // window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
+    //    { showLocationBar: false }); 
 	}
        //
     
