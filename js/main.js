@@ -10,11 +10,11 @@
     		 window.localStorage.setItem("url", localStorage['startpage']);
             
         }
-        var url = window.localStorage.getItem("url");
-		window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
-        { showLocationBar: false }); 
+       // var url = window.localStorage.getItem("url");
+		//window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
+        //{ showLocationBar: false }); 
   		  //    alert(window.localStorage.getItem("url"));
-        	//window.location.href = "file:///android_asset/www/Loading/Loading.html";
+        	window.location.href = "file:///android_asset/www/Loading/Loading.html";
 	}
        //
     
@@ -346,11 +346,23 @@ function initPage()
 	}
 function redirect () 
 { 
-	setTimeout("go_now()",1000); 
+	setTimeout("go_now()",1500); 
 }
 function go_now ()   
 { 
+	document.getElementById('nimbleLoader').style.display="none";
 	var url = window.localStorage.getItem("url");
-	window.location.href = url;
+		window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
+      { showLocationBar: false }); 
 
+}
+function noStay()
+{
+	var url = window.localStorage.getItem("url");
+		window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
+        { showLocationBar: false }); 
+}
+function yesBack()
+{
+	window.location.href="file:///android_asset/www/index.html";
 }

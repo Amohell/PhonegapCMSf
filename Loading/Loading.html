@@ -21,14 +21,19 @@
 <!-- 	<body>
 		<a href"#" onclick ="getLocation()">Get location</a>
 		<img src="" id="locationPhoto" name="locationPhoto">-->
-	       <div class="nimbleLoader"></div>
+	       <div class="nimbleLoader" id="nimbleLoader"></div>
 	        <label for="counter"></label>
 	        <div style="display:none;">
 	        <input type="text" id="counter" size="3" value="3" />
         </div>
         <br />
         <br />
-        <button id="btnCount" name="btnCount" value="btnCount" style="display:none">Start counting</button>
+        <button id="btnCount" name="btnCount" value="btnCount" style="display:none;">Start counting</button>
+		<div id="checkbox">
+			<div id="question">do you really want to leave the page</div>
+			<button id="Yesback" name"yesBack" onclick="yesBack()">Yes</button>
+			<button id="NoStay" name"noStay" onclick="noStay()">No</button>
+		</div>
     </body>
     
     
