@@ -350,21 +350,8 @@ function redirect ()
 }
 function go_now ()   
 { 
-//	document.getElementById('counter').style.display='none';
-//	var url = window.localStorage.getItem("url");
-//	window.plugins.childBrowser.showWebPage(url,
- //       { showLocationBar: false }); 
- window.location.href = "file:///android_asset/www/index.html";
-
-}
-function yesBack ()   
-{ 
-	document.getElementById('counter').style.display='none';
 	var url = window.localStorage.getItem("url");
 	window.plugins.childBrowser.showWebPage(url,
         { showLocationBar: false }); 
 
 }
-function noStay() {
-  window.location.href = "file:///android_asset/www/index.html";
- }
