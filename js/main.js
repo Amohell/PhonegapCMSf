@@ -353,15 +353,14 @@ function go_now ()
 	document.getElementById('nimbleLoader').style.display="none";
 	document.getElementById('checkbox').style.display="block;";
 	var url = window.localStorage.getItem("url");
-	alert(url);
-		window.plugins.childBrowser.showWebPage(url,
-      { showLocationBar: false }); 
+	window.location.href=url;
+	//	window.plugins.childBrowser.showWebPage(url,
+   //   { showLocationBar: false }); 
 
 }
 function noStay()
 {
 	var url = window.localStorage.getItem("url");
-	alert(url);
 		window.plugins.childBrowser.showWebPage(url,
         { showLocationBar: false }); 
 }
