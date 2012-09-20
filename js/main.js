@@ -352,14 +352,14 @@ function go_now ()
 { 
 	document.getElementById('nimbleLoader').style.display="none";
 	var url = window.localStorage.getItem("url");
-		window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
+		window.plugins.childBrowser.showWebPage(url,
       { showLocationBar: false }); 
 
 }
 function noStay()
 {
 	var url = window.localStorage.getItem("url");
-		window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
+		window.plugins.childBrowser.showWebPage(url,
         { showLocationBar: false }); 
 }
 function yesBack()
