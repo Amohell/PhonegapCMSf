@@ -10,8 +10,11 @@
     		 window.localStorage.setItem("url", localStorage['startpage']);
             
         }
-    //    alert(window.localStorage.getItem("url"));
-        window.location.href = "file:///android_asset/www/Loading/Loading.html";
+        var url = window.localStorage.getItem("url");
+		window.plugins.childBrowser.showWebPage("file:///android_asset/www/Loading/Loading.html",
+        { showLocationBar: false }); 
+  		  //    alert(window.localStorage.getItem("url"));
+        	//window.location.href = "file:///android_asset/www/Loading/Loading.html";
 	}
        //
     
@@ -347,26 +350,21 @@ function redirect ()
 }
 function go_now ()   
 { 
+//	document.getElementById('counter').style.display='none';
+//	var url = window.localStorage.getItem("url");
+//	window.plugins.childBrowser.showWebPage(url,
+ //       { showLocationBar: false }); 
+ window.location.href = "file:///android_asset/www/index.html";
+
+}
+function yesBack ()   
+{ 
 	document.getElementById('counter').style.display='none';
 	var url = window.localStorage.getItem("url");
 	window.plugins.childBrowser.showWebPage(url,
         { showLocationBar: false }); 
 
 }
-document.getElementById('yesBack').onclick = function() {
-   window.location.href = "file:///android_asset/www/index.html";
-
-document.getElementById('yesBack').onclick = function() {
-   var url = window.localStorage.getItem("url");
-	window.plugins.childBrowser.showWebPage(url,
-        { showLocationBar: false }); 
-}​;​
-
-
-				
-				
-
-
-
-
-  
+function noStay() {
+  window.location.href = "file:///android_asset/www/index.html";
+ }
