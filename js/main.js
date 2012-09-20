@@ -346,7 +346,7 @@ function initPage()
 	}
 function redirect () 
 { 
-	setTimeout("go_now()",1500); 
+	setTimeout("go_now()",400); 
 }
 function go_now ()   
 { 
