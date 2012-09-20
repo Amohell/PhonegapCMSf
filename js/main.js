@@ -351,7 +351,6 @@ function redirect ()
 function go_now ()   
 { 
 	var url = window.localStorage.getItem("url");
-	window.plugins.childBrowser.showWebPage(url,
-        { showLocationBar: false }); 
+	window.location.href = url;
 
 }
