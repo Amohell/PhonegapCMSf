@@ -351,7 +351,9 @@ function redirect ()
 function go_now ()   
 { 
 	document.getElementById('nimbleLoader').style.display="none";
+	document.getElementById('checkbox').style.display="block;";
 	var url = window.localStorage.getItem("url");
+	alert(url);
 		window.plugins.childBrowser.showWebPage(url,
       { showLocationBar: false }); 
 
@@ -359,10 +361,13 @@ function go_now ()
 function noStay()
 {
 	var url = window.localStorage.getItem("url");
+	alert(url);
 		window.plugins.childBrowser.showWebPage(url,
         { showLocationBar: false }); 
 }
 function yesBack()
 {
+	document.getElementById('nimbleLoader').style.display="block";
+	document.getElementById('checkbox').style.display="none;";
 	window.location.href="file:///android_asset/www/index.html";
 }
