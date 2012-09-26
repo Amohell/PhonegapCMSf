@@ -99,11 +99,11 @@ color:#999;
 .button
 {
     border-bottom:black solid 1px;
-    height:100px;
     width:100%;
     color:#006582;
     text-align: center;
     background-color:white;
+
 }
 #button1,#button2{
     border:black solid 1px;

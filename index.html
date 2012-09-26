@@ -63,9 +63,8 @@
   			while(window.localStorage.getItem("urlcms" + urlnumb) != null)
   			{
   				var nameCms=window.localStorage.getItem("namecms" + urlnumb);
-  				alert(nameCms);
   				var urlCms= window.localStorage.getItem("urlcms" + urlnumb);
-  				alert(urlCms);
+  				document.getElementById("cmssystems").innerHTML+='<a href="#" onclick=loadPage("'+urlCms+'");><div class="button">'+nameCms+'</div></a>'
   				urlnumb++;
   			}
   			if(window.localStorage.getItem("urlcms" + urlnumb) == null)
@@ -115,9 +114,12 @@
 				</div>-->
     			
 				<div id="menu">
+					<div id="cmssystems">
+						
+					</div>
 				<!--	<form id="target" action="destination.html"></form>-->
 					<a href="#" onclick="showAddCMS();"><div id="button1">New CMS</div></a>
-					<a href="#" onclick="addItem();"><div id="button2">Remove CMS</div></a>
+					<a href="#" onclick="addItem();"><div id="button2">Edit CMS</div></a>
 					<div id="setCMS">
 						<div id="headerSetCMS">Enter URL</div>
 						<div id="inputfields">
