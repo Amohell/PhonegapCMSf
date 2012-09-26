@@ -60,11 +60,12 @@
 					document.getElementById('button7').style.height='16.66667%';*/
 				}
 			var urlnumb = 0;
+			document.getElementById("cmssystems").innerHTML = ""
   			while(window.localStorage.getItem("urlcms" + urlnumb) != null)
   			{
   				var nameCms=window.localStorage.getItem("namecms" + urlnumb);
   				var urlCms= window.localStorage.getItem("urlcms" + urlnumb);
-  				document.getElementById("cmssystems").innerHTML+='<a href="#" onclick=loadPage("'+urlCms+'");><div class="button">'+nameCms+'</div></a>'
+  				$('#cmssystems').append('<a href="#" onclick=loadPage("'+urlCms+'");><div class="button">'+nameCms+'</div></a>')
   				urlnumb++;
   			}
   			if(window.localStorage.getItem("urlcms" + urlnumb) == null)
