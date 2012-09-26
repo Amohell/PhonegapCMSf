@@ -63,8 +63,9 @@
   			while(window.localStorage.getItem("urlcms" + urlnumb) != null)
   			{
   				var nameCms=window.localStorage.getItem("namecms" + urlnumb);
+  				alert(nameCms);
   				var urlCms= window.localStorage.getItem("urlcms" + urlnumb);
-  				$('#menu').append('<a href="#" onclick=loadStartpage("'+urlCms+'");><div class="button">'+nameCms+'</div></a>');
+  				alert(urlCms);
   				urlnumb++;
   			}
   			if(window.localStorage.getItem("urlcms" + urlnumb) == null)
