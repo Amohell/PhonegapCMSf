@@ -6,7 +6,8 @@
 
 
 body{
-background-color:#006582;}
+background-color:#006582;
+}
 
 
 
@@ -63,10 +64,11 @@ color:#999;
 
 #titlebar
 {
+    float:left;
+    margin-bottom:0.1%;
     height:5%;
     width:100%;  
-    float:left;
-    margin-bottom:2.1%;
+    border-bottom:1px solid black;
     background-color:#006582;
     text-align:center;
     
@@ -81,9 +83,10 @@ color:#999;
 }
 #tweets
 {
+    position:absolute;
     height:10%;
     width:100%;
-    float:left;
+    bottom:0px;
     background-color:#006582;
     text-align:center;
 }
@@ -93,7 +96,7 @@ color:#999;
     text-align:center;
     width:96.5%;
 }
-#button1, #button2, #button3, #button4, #button5, #button6, #button7, #button8
+.button
 {
     border-bottom:black solid 1px;
     height:100px;
@@ -102,16 +105,35 @@ color:#999;
     text-align: center;
     background-color:white;
 }
+#button1,#button2{
+    border:black solid 1px;
+    height:100px;
+    width:49.8%;
+    color:#006582;
+    text-align: center;
 
-#button1:hover, #button2:hover, #button3:hover, #button4:hover, #button5:hover, #button6:hover, #button7:hover, #button8:hover, #button4:hover
+    background-color:white;
+}
+ #button1{
+         position:absolute;
+         left:0%;
+          bottom:10%;
+    }
+ #button2{
+         position:absolute;
+         right:0%;
+         bottom:10%;
+    }
+#button1:hover, #button2:hover, .button:hover
 {
     background-color:red;
     color:white;
 }
 #menu
 {
-    float:left;
-    height:84%;
+    top:6%;
+    position:relative;
+    height:90%;
     width:100%;
     display:block;
 }
@@ -119,6 +141,7 @@ a, a:hover, a:active, a:visited { color: white; text-decoration:none;}
 
 #mainWebsite
 {
+    
     position:absolute;
     z-index: 15;
     width:100%;
@@ -185,4 +208,31 @@ button.camera-control:hover {
 #camerabuttons{
     width:160px;
 }
+#setCMS{
+    display:none;
+    background-color:green;
+    border:black solid 1px;
+    width:30%;
+    height:30%;
+    position:absolute;
+    top:25%;
+    left:36%;
+}
+#headerSetCMS
+{
+    border-bottom:1px solid black;
+    width:100%
+}
+#inputfields{
+    float:left;
+    width:100%;
+    margin-top:15%;
+    margin-left:22%;
+}
+#buttonInput{
+    float:left;
+    margin-top:19%;
+    text-align:right;
+}
+
 
