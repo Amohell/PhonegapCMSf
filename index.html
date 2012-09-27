@@ -75,15 +75,14 @@
 	  			{
 	  				
 	  			}
-	  	//		window.localStorage.setItem("devicePlatform",device.platform);
-		//		window.localStorage.setItem("devicePhonegapVersion",device.phonegap);
+	  			window.localStorage.setItem("devicePlatform",device.platform);
+				window.localStorage.setItem("devicePhonegapVersion",device.phonegap);
 				
 			}
 			function onDeviceReady() 
 			{
 				document.addEventListener("backbutton", onBackKeyDown, false);
 				document.addEventListener("menubutton", onMenuKeyDown, false);
-				alert(device.platform );
 
     		}
     		

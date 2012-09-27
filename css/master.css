@@ -221,32 +221,32 @@ button.camera-control:hover {
     display:none;
     background-color:green;
     border:black solid 1px;
-    width:500px;
+    width:700px;
     height:200px;
     position:absolute;
-    top:25%;
+    top:20%;
     left:32%;
 }
 #headerSetCMS
 {
     border-bottom:1px solid black;
-    width:100%
+    width:700px
 }
 #inputfieldSite{
     border:1px solid black;
-    margin-top:10%;
+    margin-top:20px;
     float:left;
 }
 #inputfieldUser
 {
     border:1px solid black;
-        margin-top:10%;
+        margin-top:20px;
       float:right;
 }
 #buttonInput{
-    width:100%;
+    width:700px;
+    float:left;
     border-top:1px black solid;
-    float:right;
     margin-top:40px;
 }
 
