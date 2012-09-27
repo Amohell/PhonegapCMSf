@@ -78,7 +78,9 @@
 	  			{
 	  				
 	  			}
-	  			
+	  			$(document).bind("mobileinit", function(){
+     			 $.mobile.metaViewportContent = "width=device-width, minimum-scale=1, maximum-scale=2";
+				});
 				disableEditMode();
 				
 			}
@@ -121,6 +123,7 @@
 				window.localStorage.setItem("editMode", "disabled");
 				
 			}
+			
 			delete init;
 	</script>
     </head>
@@ -159,7 +162,7 @@
 							URL CMS:&nbsp;&nbsp;<input type="text" id="urlcms">
 						</div>
 						<div id="inputfieldUser">
-							Username: <input type="text" id="UsernameCms"><br/><br/>
+							Username: <input type="text" id="usernameCms"><br/><br/>
 							Password: <input type="password" id="passwordCms">
 						</div>
 						<div id="buttonInput">
