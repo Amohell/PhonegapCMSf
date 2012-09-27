@@ -105,10 +105,9 @@ color:#999;
     background-color:white;
 
 }
-#button1,#button2{
+#button1,#buttonEnableEdit, #buttonDisableEdit{
     border:black solid 1px;
-    height:100px;
-    width:49.8%;
+    height:100px; 
     color:#006582;
     text-align: center;
 
@@ -118,11 +117,21 @@ color:#999;
          position:absolute;
          left:0%;
           bottom:10%;
+          width:49.8%;
     }
- #button2{
+ #buttonEnableEdit{
          position:absolute;
          right:0%;
          bottom:10%;
+         width:49.8%;
+         width:49.8%;
+    }
+#buttonDisableEdit{
+        position:absolute;
+        right:0%;
+        bottom:10%;
+        display:none;
+        width:100%;
     }
 #button1:hover, #button2:hover, .button:hover
 {
@@ -212,27 +221,33 @@ button.camera-control:hover {
     display:none;
     background-color:green;
     border:black solid 1px;
-    width:30%;
-    height:30%;
+    width:500px;
+    height:200px;
     position:absolute;
     top:25%;
-    left:36%;
+    left:32%;
 }
 #headerSetCMS
 {
     border-bottom:1px solid black;
     width:100%
 }
-#inputfields{
+#inputfieldSite{
+    border:1px solid black;
+    margin-top:10%;
     float:left;
-    width:100%;
-    margin-top:15%;
-    margin-left:22%;
+}
+#inputfieldUser
+{
+    border:1px solid black;
+        margin-top:10%;
+      float:right;
 }
 #buttonInput{
-    float:left;
-    margin-top:19%;
-    text-align:right;
+    width:100%;
+    border-top:1px black solid;
+    float:right;
+    margin-top:40px;
 }
 
 

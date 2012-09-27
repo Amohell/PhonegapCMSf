@@ -51,7 +51,7 @@
 				{
 				}
 				else{
-			/*		document.getElementById('button1').style.height='16.66667%';
+				/*	document.getElementById('button1').style.height='16.66667%';
 					document.getElementById('button2').style.height='16.66667%';
 					document.getElementById('button3').style.height='16.66667%';
 					document.getElementById('button4').style.height='16.66667%';
@@ -59,28 +59,24 @@
 					document.getElementById('button6').style.height='16.66667%';
 					document.getElementById('button7').style.height='16.66667%';*/
 				}
-			var urlnumb = 0;
-			document.getElementById("cmssystems").innerHTML = ""
-  			while(window.localStorage.getItem("urlcms" + urlnumb) != null)
-  			{
-  				var nameCms=window.localStorage.getItem("namecms" + urlnumb);
-  				var urlCms= window.localStorage.getItem("urlcms" + urlnumb);
-  				$('#cmssystems').append('<a href="#" onclick=loadPage("'+urlCms+'");><div class="button">'+nameCms+'</div></a>')
-  				urlnumb++;
-  			}
-  			  var element = document.getElementById('deviceProperties');
-
-  			element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                            'Device PhoneGap: ' + device.phonegap + '<br />' + 
-                            'Device Platform: ' + device.platform + '<br />' + 
-                            'Device UUID: '     + device.uuid     + '<br />' + 
-                            'Device Version: '  + device.version  + '<br />';
- 			  	
-  			if(window.localStorage.getItem("urlcms" + urlnumb) == null)
-  			{
-  				
-  			}
-				
+				var urlnumb = 0;
+				document.getElementById("cmssystems").innerHTML = ""
+	  			while(urlnumb != 30)
+	  			{
+	  				if(window.localStorage.getItem("urlcms" + urlnumb) != null && window.localStorage.getItem("urlcms" + urlnumb) != "null")
+	  				{
+		  				var nameCms=window.localStorage.getItem("namecms" + urlnumb);
+		  				var urlCms= window.localStorage.getItem("urlcms" + urlnumb);
+		  				$('#cmssystems').append('<a href="#" onclick=loadPage("'+urlCms+'");><div class="button">'+nameCms+'</div></a>')
+		  			}
+		  				urlnumb++;
+	  			}  	
+	  			if(window.localStorage.getItem("urlcms" + urlnumb) == null)
+	  			{
+	  				
+	  			}
+	  	//		window.localStorage.setItem("devicePlatform",device.platform);
+		//		window.localStorage.setItem("devicePhonegapVersion",device.phonegap);
 				
 			}
 			function onDeviceReady() 
@@ -99,7 +95,27 @@
     		{
     			
     		}
-			
+    		function enableEditMode()
+    		{
+    			document.getElementById('buttonEnableEdit').style.display = "none";
+    			document.getElementById('button1').style.display = "none";
+    			document.getElementById('buttonDisableEdit').style.display = "block";
+    			document.getElementById('delete').style.display = "block";
+    			document.getElementById('addCmsAction').style.display = "none"
+    			document.getElementById('editCmsAction').style.display = "block"
+    			window.localStorage.setItem("editMode", "enabled");
+    		}
+    		function disableEditMode()
+			{
+				document.getElementById('buttonDisableEdit').style.display = "none";
+				document.getElementById('button1').style.display = "block";
+				document.getElementById('buttonEnableEdit').style.display = "block";
+				document.getElementById('delete').style.display = "none";
+    			document.getElementById('addCmsAction').style.display = "block"
+    			document.getElementById('editCmsAction').style.display = "none"
+				window.localStorage.setItem("editMode", "disabled");
+				
+			}
 			delete init;
 	</script>
     </head>
@@ -109,11 +125,8 @@
 		<div id="mainWebsite">
 			<div id="titlebar">
 				<span id="optionsbutton">
-				<div id="deviceProperties">
-					
-				</div>
-					<a href="#"  onclick="openOptions()"><img src="images/options.png" height="80%" width="30px"></a>
-			</span>-->
+					<a href="#"  onclick="openOptionsIndex()"><img src="images/options.png" height="80%" width="30px"></a>
+				</span>-->
 				<span id="title">
 					<a href="#" onclick="loadIntern('http://www.seneca.nl/')">Seneca CMS</a>
 				</span>
@@ -130,20 +143,28 @@
 					<div id="cmssystems">
 						
 					</div>
-					<p id="deviceProperties">Loading device properties...</p>
 
 				<!--	<form id="target" action="destination.html"></form>-->
 					<a href="#" onclick="showAddCMS();"><div id="button1">New CMS</div></a>
-					<a href="#" onclick="addItem();"><div id="button2">Edit CMS</div></a>
+					<a href="#" onclick="enableEditMode();"><div id="buttonEnableEdit">Edit CMS</div></a>
+					<a href="#" onclick="disableEditMode();"><div id="buttonDisableEdit">Leave edit mode</div></a>
 					<div id="setCMS">
 						<div id="headerSetCMS">Enter URL</div>
-						<div id="inputfields">
+						<div id="inputfieldSite">
 							Name CMS:<input type="text" id="nameCMS"><br/><br/>
 							URL CMS:&nbsp;&nbsp;<input type="text" id="urlcms">
 						</div>
+						<div id="inputfieldUser">
+							Username: <input type="text" id="UsernameCms"><br/><br/>
+							Password: <input type="password" id="passwordCms">
+						</div>
 						<div id="buttonInput">
-							<button id="cancelCmsAdd" onclick="hideCmsAdd();">Cancel</button>
-							<button id="addCmsAction" onclick="cmsAdd();">Add Cms</button>	
+							<button id="delete" onclick="deleteCms()" style="float:left; display:none;">Delete</button>	
+							<button id="addCmsAction" onclick="cmsAdd();" style="float:right;">Add Cms</button>
+							<button id="editCmsAction" onclick="cmsEdit();" style="float:right; display:none;">Edit Cms</button>
+							<button id="cancelCmsAdd" onclick="hideCmsAdd();" style="float:right;">Cancel</button>
+							
+							
 						</div>
 					</div>
 					<!--<a href="#" onclick="editItem();"><div id="button5">Edit item</div></a>
