@@ -24,31 +24,31 @@
 		
 			function ptweet(read)
 			{
-			var tdata='';
-			for(i=0;i<5;i++)
-			{
-			data =read[i];
-			var id=data.id;
-			var text=data.text;
-			var created_time=data.created_at;
-			var screen_name=data.user.screen_name;
-			var image=data.user.profile_image_url;
-			var source=data.source;
-			tdata+="<div style='float:left; width:100%; margin-top:2px; border-top:solid 1px black; vertical-align:center;'><span class='status' id='"+id+"'><img src="+image+" class='twitter_image'/><a href='http://twitter.com/"+screen_name+"'>"+screen_name+"<span id='txt'>"+text+"<span class='twitter_posted_at'><span class='timeago' title='"+created_time+"'></span><i> </i></span></span></span></div></a>";
-			 
-			}
-			document.getElementById("tweets").innerHTML=tdata;
+				var tdata='';
+				for(i=0;i<5;i++)
+				{
+					data =read[i];
+					var id=data.id;
+					var text=data.text;
+					var created_time=data.created_at;
+					var screen_name=data.user.screen_name;
+					var image=data.user.profile_image_url;
+					var source=data.source;
+					tdata+="<div style='float:left; width:100%; margin-top:2px; border-top:solid 1px black; vertical-align:center;'><span class='status' id='"+id+"'><img src="+image+" class='twitter_image'/><a href='http://twitter.com/"+screen_name+"'>"+screen_name+"<span id='txt'>"+text+"<span class='twitter_posted_at'><span class='timeago' title='"+created_time+"'></span><i> </i></span></span></span></div></a>";
+				 
+				}
+				document.getElementById("tweets").innerHTML=tdata;
 			}
 			
 			function init() 
 			{
 				var pathname = window.location.pathname;
 				alert(pathname);
-				document.addEventListener("touchmove", preventBehavior, false);
+				//document.addEventListener("touchmove", preventBehavior, false);
 			    document.addEventListener("deviceready", onDeviceReady, false);
-				document.ontouchmove = function(e) 
-				{
-				}
+				//document.ontouchmove = function(e) 
+				//{
+				//}
 				if(screen.height == "800")
 				{
 					
