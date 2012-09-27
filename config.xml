@@ -6,8 +6,8 @@
 
 <name>TestforCMS</name>
 
-<preference name="android-minSdkVersion" value="4" />
-<preference name="android-maxSdkVersion" value="11" />
+<preference name="android-minSdkVersion" value="7" />
+<preference name="android-maxSdkVersion" value="15" />
 
 <preference name="fullscreen" value="true" />
 
