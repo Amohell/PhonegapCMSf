@@ -42,6 +42,8 @@
 			
 			function init() 
 			{
+				var pathname = window.location.pathname;
+				alert(pathname);
 				document.addEventListener("touchmove", preventBehavior, false);
 			    document.addEventListener("deviceready", onDeviceReady, false);
 				document.ontouchmove = function(e) 
@@ -49,6 +51,7 @@
 				}
 				if(screen.height == "800")
 				{
+					
 				}
 				else{
 				/*	document.getElementById('button1').style.height='16.66667%';
@@ -75,8 +78,7 @@
 	  			{
 	  				
 	  			}
-	  			window.localStorage.setItem("devicePlatform",device.platform);
-				window.localStorage.setItem("devicePhonegapVersion",window.device.phonegap);
+	  			
 				disableEditMode();
 				
 			}
@@ -84,6 +86,8 @@
 			{
 				document.addEventListener("backbutton", onBackKeyDown, false);
 				document.addEventListener("menubutton", onMenuKeyDown, false);
+				window.localStorage.setItem("devicePlatform",device.platform);
+				window.localStorage.setItem("devicePhonegapVersion",window.device.phonegap);
 
     		}
     		
