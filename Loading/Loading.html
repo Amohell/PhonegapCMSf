@@ -5,19 +5,25 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, height=device-height"> 
     	
-    	 <script type="text/javascript" charset="utf-8" src="../cordova-2.0.0.js"></script>
+    	 <script>
+               if (navigator.userAgent.toLowerCase().match(/android/)) {
+                               document.write('<script charset="utf-8" src="http://ixpdev.smartsite.seneca.intern/phonegap/test/androidcordova.js"><\/script>');
+               } else if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/)) {
+                               document.write('<script charset="utf-8" src="http://ixpdev.smartsite.seneca.intern/phonegap/test/iphonecordova.js"><\/script>');
+               }
+		 </script>
     	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"> </script>  
    		 <script type="text/javascript" src="js/demo.js"></script>
    		 <script type="text/javascript" src="jquery.nimble.loader.js"></script>
-   		 <script type="text/javascript" src="../js/main.js"   ></script>
-   		 <script src="../childbrowser.js"></script>
+   		 <script src="http://ixpdev.smartsite.seneca.intern/phonegap/test/main.js" charset=""UTF-8" "></script>
+
 
    		 <link rel="stylesheet" href="style/style.css" media="screen" type="text/css" />
   		 <link rel="stylesheet" href="style/loader.css" media="screen" type="text/css" />
 
 	</head>
     	
-    <body onload="initPage()">
+    <body onload="initLoadingPage()">
 <!-- 	<body>
 		<a href"#" onclick ="getLocation()">Get location</a>
 		<img src="" id="locationPhoto" name="locationPhoto">-->
@@ -29,11 +35,18 @@
         <br />
         <br />
         <button id="btnCount" name="btnCount" value="btnCount" style="display:none;">Start counting</button>
-		<div id="checkbox">
-			<div id="question">do you really want to leave the page</div>
-			<button id="Yesback" name"yesBack" onclick="yesBack()">Yes</button>
-			<button id="NoStay" name"noStay" onclick="noStay()">No</button>
-		</div>
+		
+		<Form name="mainForm">
+		
+			<input type="hidden" name="username" value="test" />
+			<input type="hidden" name="password" value="test" />
+			<input type="hidden" name="devicetype" value="" />
+			<input type="hidden" name="cordovaEnabled" value="1" /> <!-- zetten in deviceready -->
+		
+			<input type="submit" value="go" />
+		
+		</form>
+
     </body>
     
     
