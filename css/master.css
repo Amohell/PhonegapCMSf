@@ -222,10 +222,10 @@ button.camera-control:hover {
     background-color:green;
     border:black solid 1px;
     width:700px;
-    height:200px;
+    height:220px;
     position:absolute;
     top:20%;
-    left:32%;
+    left:19em;
 }
 #headerSetCMS
 {
