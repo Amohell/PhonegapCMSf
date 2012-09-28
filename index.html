@@ -94,10 +94,18 @@
     		
     		function onBackKeyDown() 
     		{
-    			
+    			navigator.app.exitApp();
     		}
     		function onMenuKeyDown() 
     		{
+    			if(document.getElementById('buttonEnableEdit').style.display == "none")
+    			{
+    				disableEditMode();
+    				return;
+    			}else{
+    				enableEditMode();
+    				return;
+    			}
     			
     		}
     		function enableEditMode()
