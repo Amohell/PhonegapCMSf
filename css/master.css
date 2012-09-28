@@ -234,7 +234,7 @@ button.camera-control:hover {
 }
 #inputfieldSite{
     border:1px solid black;
-    margin-top:20px;
+    margin-top:1%;
     float:left;
 }
 #inputfieldUser
@@ -247,7 +247,7 @@ button.camera-control:hover {
     width:100%;
     float:left;
     border-top:1px black solid;
-    margin-top:70px;
+    margin-top:7%;
 }
 
 
