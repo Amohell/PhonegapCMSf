@@ -221,8 +221,8 @@ button.camera-control:hover {
     display:none;
     background-color:green;
     border:black solid 1px;
-    width:50%;
-    height:24%;
+    width:45%;
+    height:32%;
     position:absolute;
     top:20%;
     left:30%
