@@ -221,16 +221,16 @@ button.camera-control:hover {
     display:none;
     background-color:green;
     border:black solid 1px;
-    width:700px;
-    height:220px;
+    width:80%;
+    height:24%;
     position:absolute;
     top:20%;
-    left:19em;
+    left:10%
 }
 #headerSetCMS
 {
     border-bottom:1px solid black;
-    width:700px;
+    width:100%
 }
 #inputfieldSite{
     border:1px solid black;
@@ -240,11 +240,11 @@ button.camera-control:hover {
 #inputfieldUser
 {
     border:1px solid black;
-        margin-top:20px;
-      float:right;
+      margin-top:20px;
+     float:right;
 }
 #buttonInput{
-    width:700px;
+    width:100%;
     float:left;
     border-top:1px black solid;
     margin-top:70px;
