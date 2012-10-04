@@ -10,6 +10,9 @@
     	<link rel="stylesheet" href="js/jquery.mobile-1.0.min.css" />
     		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     		<script src="js/jquery.mobile-1.0.min.js"></script>
+    		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"> </script>  
+   			 <script type="text/javascript" src="js/demo.js"></script>
+   		 	<script type="text/javascript" src="jquery.nimble.loader.js"></script>
 		
 		<script>
                if (navigator.userAgent.toLowerCase().match(/android/)) {
@@ -136,7 +139,16 @@
     </head>
 		
     <body onload="init()">
-    	 
+    	<div id="loading">
+		       <div class="nimbleLoader" id="nimbleLoader"></div>
+		        <label for="counter"></label>
+		        <div style="display:none;">
+		        <input type="text" id="counter" size="3" value="3" />
+	        </div>
+	        <br />
+	        <br />
+	        <button id="btnCount" name="btnCount" value="btnCount" style="display:none;">Start counting</button>
+    	</div>
 		<div id="mainWebsite">
 			<div id="titlebar">	
 			<span id="title">
