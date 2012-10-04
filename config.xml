@@ -24,8 +24,6 @@
 <access origin="http://ixpdev" ></access>
 <access origin="http://www.twitter.com" ></access>
 
-<gap:plugin name="ChildBrowser" version="~3" /> <!-- for Cordova (1.9.0+) -->
-
 <feature name="http://api.phonegap.com/1.0/network" />
 <feature name="http://api.phonegap.com/1.0/geolocation"/>
 <feature name="http://api.phonegap.com/1.0/file"/>
@@ -36,5 +34,5 @@
 <feature name="http://api.phonegap.com/1.0/battery"/>
 
 
-<preference name="phonegap-version" value="2.0.0" />
+<preference name="phonegap-version" value="2.1.0" />
 </widget>
