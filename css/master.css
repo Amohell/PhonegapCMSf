@@ -6,7 +6,7 @@
 
 
 body{
-background-color:#006582;
+background: url("../images/emptyscreen_logo.png") no-repeat center  #EBEBE7;
 }
 
 
@@ -27,16 +27,7 @@ font-size: 11px;
 background:transparent;
 border:#eaeaea 2px;
 }
-.status a
-{
-color:black;
-text-decoration:none;
-font-size: 11px;
-}
-.status a:hover{
-color:blue;
-text-decoration:underline;
-}
+
 .twitter_image{
 float:left;
 margin-right:10px;
@@ -65,7 +56,6 @@ color:#999;
 #titlebar
 {
     float:left;
-    margin-bottom:0.1%;
     height:5%;
     width:100%;  
     border-bottom:1px solid black;
@@ -83,11 +73,9 @@ color:#999;
 }
 #tweets
 {
-    position:absolute;
+    float:left;
     height:10%;
     width:100%;
-    bottom:0px;
-    background-color:#006582;
     text-align:center;
 }
 #title
@@ -100,53 +88,46 @@ color:#999;
 {
     border-bottom:black solid 1px;
     width:100%;
-    color:#006582;
+    height:15%;
+    
+    color:black;
     text-align: center;
-    background-color:white;
+    background-color:#DDF4FB;
 
 }
 #button1,#buttonEnableEdit, #buttonDisableEdit{
+    float:left;
     border:black solid 1px;
-    height:100px; 
+    height:5%; 
     color:#006582;
     text-align: center;
-
+    width:100%;
     background-color:white;
 }
  #button1{
-         position:absolute;
-         left:0%;
-          bottom:10%;
-          width:49.8%;
+         
+          width:49.845%;
     }
  #buttonEnableEdit{
-         position:absolute;
-         right:0%;
-         bottom:10%;
-         width:49.8%;
-         width:49.8%;
+         width:49.845%;
     }
 #buttonDisableEdit{
-        position:absolute;
-        right:0%;
-        bottom:10%;
         display:none;
-        width:100%;
+        width:99.9%;
     }
-#button1:hover, #button2:hover, .button:hover
+#button1:hover, #button2:hover, .button:hover,  #buttonEnableEdit:hover, #buttonDisableEdit:hover
 {
-    background-color:red;
+    background-color:#ff6740;
     color:white;
 }
 #menu
 {
-    top:6%;
+    float:left;
     position:relative;
-    height:90%;
+    height:94.9%;
     width:100%;
     display:block;
 }
-a, a:hover, a:active, a:visited { color: white; text-decoration:none;}
 
 #mainWebsite
 {
@@ -248,6 +229,12 @@ button.camera-control:hover {
     float:left;
     border-top:1px black solid;
     margin-top:7%;
+}
+#cmssystems{
+    height:80%;
+    float:left;
+    width:100%;
+    overflow:auto;
 }
 
 

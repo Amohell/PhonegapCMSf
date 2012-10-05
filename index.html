@@ -9,10 +9,7 @@
 		
 		    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"> </script>  
-   			 <script type="text/javascript" src="js/demo.js"></script>
    		 	<script type="text/javascript" src="jquery.nimble.loader.js"></script>
-   		 	 <link rel="stylesheet" href="style/style.css" media="screen" type="text/css" />
-  		 <link rel="stylesheet" href="style/loader.css" media="screen" type="text/css" />
 		<script>
                if (navigator.userAgent.toLowerCase().match(/android/)) {
                                document.write('<script charset="utf-8" src="http://ixpdev.smartsite.seneca.intern/phonegap/test/androidcordova.js"><\/script>');
@@ -28,7 +25,7 @@
 			function ptweet(read)
 			{
 				var tdata='';
-				for(i=0;i<4;i++)
+				for(i=0;i<6;i++)
 				{
 					data =read[i];
 					var id=data.id;
@@ -37,7 +34,7 @@
 					var screen_name=data.user.screen_name;
 					var image=data.user.profile_image_url;
 					var source=data.source;
-					tdata+="<div style='float:left; width:100%; margin-top:2px; border-top:solid 1px black; vertical-align:center;'><span class='status' id='"+id+"'><img src="+image+" class='twitter_image'/><a href='http://twitter.com/"+screen_name+"'>"+screen_name+"<span id='txt'>"+text+"<span class='twitter_posted_at'><span class='timeago' title='"+created_time+"'></span><i> </i></span></span></span></div></a>";
+					tdata+="<div style='float:left; width:100%; border-top:solid 1px black; vertical-align:center;'><span class='status' id='"+id+"'><img src="+image+" class='twitter_image'/><a href='http://twitter.com/"+screen_name+"'>"+screen_name+"<span id='txt'>"+text+"<span class='twitter_posted_at'><span class='timeago' title='"+created_time+"'></span><i> </i></span></span></span></div></a>";
 				 
 				}
 				document.getElementById("tweets").innerHTML=tdata;
@@ -72,7 +69,7 @@
 	  				{
 		  				var nameCms=window.localStorage.getItem("namecms" + urlnumb);
 		  				var urlCms= window.localStorage.getItem("urlcms" + urlnumb);
-		  				$('#cmssystems').append('<a href="#" onclick=loadPage("'+urlCms+'","'+urlnumb+'");><div class="button">'+nameCms+'</div></a>')
+		  				$('#cmssystems').append('<div class="button"><a href="#" style="display:block; height:100%; width:100%" onclick=loadPage("'+urlCms+'","'+urlnumb+'")>'+nameCms+'</a></div>')
 		  			}
 		  				urlnumb++;
 	  			}  	
@@ -141,10 +138,10 @@
     <body onload="init()">
     	<div id="loading" style="display:none;">
 		      <img src="images/loading.png" style="position:absolute; left:18em; top:18em"/>
-    	</div>
+    </div>
     	
     	
-		<div id="mainWebsite">
+		<div id="mainWebsite" style="display:block;">
 			<div id="titlebar">	
 			<span id="title">
 					<a href="#" onclick="loadIntern('http://www.seneca.nl/')">Seneca CMS</a>
@@ -156,9 +153,9 @@
 						
 					</div>
 
-					<a href="#" onclick="showAddCMS();"><div id="button1">New CMS</div></a>
-					<a href="#" onclick="enableEditMode();"><div id="buttonEnableEdit">Edit CMS</div></a>
-					<a href="#" onclick="disableEditMode();"><div id="buttonDisableEdit">Leave edit mode</div></a>
+					<div id="button1"><a href="#" style="display:block; height:100%; width:100%;" onclick="showAddCMS();">New CMS</a></div>
+					<div id="buttonEnableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="enableEditMode();">Edit CMS</a></div>
+					<div id="buttonDisableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="disableEditMode();">Leave edit mode</a></div>
 					<div id="setCMS">
 						<div id="headerSetCMS">CMS information</div>
 						<div id="inputfieldSite">
