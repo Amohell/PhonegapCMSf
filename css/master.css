@@ -83,10 +83,10 @@ color:#999;
 #button1,#buttonEnableEdit, #buttonDisableEdit,#delete, #addCmsAction, #editCmsAction, #cancelCmsAdd{
     float:left;
     border:black solid 1px;
-    height:50%; 
     color:#006582;
     text-align: center;
     width:100%;
+    height:100%;
     background-color:white;
 }
  #button1{
@@ -116,6 +116,11 @@ color:#999;
 #editbuttons
 {
     display:none;
+    height:5%;
+}
+#normalbuttons
+{
+    height:5%
 }
 
 #mainWebsite
@@ -190,7 +195,7 @@ button.camera-control:hover {
 #setCMS{
     display:none;
     width:100%;
-    height:97.5%;
+    height:94.8%;
 }
 #headerSetCMS
 {
@@ -215,7 +220,7 @@ button.camera-control:hover {
     float:left;
 }
 #cmssystems{
-    height:97.5%;
+    height:94.8%;
     float:left;
     width:100%;
     overflow:auto;

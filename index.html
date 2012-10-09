@@ -10,6 +10,7 @@
 		    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"> </script>  
    		 	<script type="text/javascript" src="jquery.nimble.loader.js"></script>
+   		 	<script type="text/javascript" src="jquery.labelify.js"></script>
 		<script>
                if (navigator.userAgent.toLowerCase().match(/android/)) {
                                document.write('<script charset="utf-8" src="http://ixpdev.smartsite.seneca.intern/phonegap/test/androidcordova.js"><\/script>');
@@ -133,6 +134,8 @@
 				window.localStorage.setItem("editMode", "disabled");
 				
 			}
+			$("input").labelify({ text: "label" });
+
 			
 			delete init;
 	</script>
@@ -158,12 +161,12 @@
 					<div id="setCMS">
 					<div id="headerSetCMS">CMS information</div>
 					<div id="inputfieldSite">
-						Name CMS:<input type="text" width="20%" id="nameCMS"><br/><br/>
-						URL CMS:&nbsp; <input type="text" width="20%" id="urlcms">
+						<label for="myinput">Name CMS:</label><input type="text" width="20%" id="nameCMS"><br/><br/>
+						<label for="myinput">URL CMS:</label>&nbsp; <input type="text" width="20%" id="urlcms">
 					</div>
 					<div id="inputfieldUser">
-						Username:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" width="20%" id="usernameCms"><br/><br/>
-						Password:&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" width="20%" id="passwordCms">
+						<label for="myinput">Username:&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" width="20%" id="usernameCms" title="Username:"><br/><br/>
+						<label for="myinput">Password:&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="password" width="20%" id="passwordCms">
 					</div>
 					<div id="buttonInput">
 						
