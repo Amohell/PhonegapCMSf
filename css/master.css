@@ -56,7 +56,7 @@ color:#999;
 #titlebar
 {
     float:left;
-    height:5%;
+    height:20;
     width:100%;  
     border-bottom:1px solid black;
     background-color:#006582;
@@ -106,10 +106,10 @@ color:#999;
 }
  #button1{
          
-          width:49.845%;
+          width:49.8%;
     }
  #buttonEnableEdit{
-         width:49.845%;
+         width:49.8%;
     }
 #buttonDisableEdit{
         display:none;
@@ -200,10 +200,10 @@ button.camera-control:hover {
 }
 #setCMS{
     display:none;
-    background-color:green;
+    background-color:white;
     border:black solid 1px;
     width:45%;
-    height:32%;
+    height:20%;
     position:absolute;
     top:20%;
     left:30%
@@ -231,7 +231,7 @@ button.camera-control:hover {
     margin-top:7%;
 }
 #cmssystems{
-    height:80%;
+    height:94.8%;
     float:left;
     width:100%;
     overflow:auto;
