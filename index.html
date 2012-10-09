@@ -102,13 +102,20 @@
     		}
     		function onMenuKeyDown() 
     		{
-    			if(document.getElementById('buttonEnableEdit').style.display == "none")
+    			if(document.getElementByID("setCMS").style.display == "block")
     			{
-    				disableEditMode();
-    				return;
-    			}else{
-    				enableEditMode();
-    				return;
+    				hideCmsAdd();
+    			}
+    			else
+    			{
+	    			if(document.getElementById('buttonEnableEdit').style.display == "none")
+	    			{
+	    				disableEditMode();
+	    				return;
+	    			}else{
+	    				enableEditMode();
+	    				return;
+	    			}
     			}
     			
     		}
@@ -150,41 +157,43 @@
 		<div id="mainWebsite" style="display:block;">
 			<div id="titlebar">	
 			<span id="title">
-					<img src="images/logopng.png" />
+					<img src="images/Logopng.png" />
 			</span>		
 			</div>				
     			
 				<div id="menu">
-					<div id="cmssystems">
-					</div>
-					
+					<div id="cmssystems"></div>
 					<div id="setCMS">
-					<div id="headerSetCMS">CMS information</div>
-					<div id="inputfieldSite">
-						<label for="myinput">Name CMS:</label><input type="text" width="20%" id="nameCMS"><br/><br/>
-						<label for="myinput">URL CMS:</label>&nbsp; <input type="text" width="20%" id="urlcms">
-					</div>
-					<div id="inputfieldUser">
-						<label for="myinput">Username:&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" width="20%" id="usernameCms" title="Username:"><br/><br/>
-						<label for="myinput">Password:&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="password" width="20%" id="passwordCms">
-					</div>
-					<div id="buttonInput">
+						<div id="headerSetCMS">CMS information</div>
+						<div id="inputfieldSite">
+							<div id="labels">
+								Name CMS:<br /><br />
+								URL CMS:<br /><br />
+								Username:<br /><br />
+								Password:
+							</div>
+							<div id="inputs">
+								<input type="text" size="35" id="nameCMS"><br/><br/>
+								<input type="text" size="35" id="urlcms"><br/><br/>
+								<input type="text" size="35" id="usernameCms" title="Username:"><br/><br/>
+								<input type="password" size="35" id="passwordCms">
+							</div>
 						
+						</div>
 					</div>
-				</div>
 				<div id="editbuttons">
 					<div id="cancelCmsAdd"><a href="#" style="display:block; height:100%; width:100%;" onclick="hideCmsAdd();">Cancel</a></div>
 					<div id="delete"><a href="#" style="display:block; height:100%; width:100%;" onclick="deleteCms();">Delete</a></div>
 					<div id="addCmsAction"><a href="#" style="display:block; height:100%; width:100%;" onclick="cmsAdd();">Add CMS</a></div>
 					<div id="editCmsAction"><a href="#" style="display:block; height:100%; width:100%;" onclick="cmsEdit();">Edit Cms</a></div>				
 				</div>	
-					<div id="normalbuttons">
-						<div id="button1"><a href="#" style="display:block; height:100%; width:100%;" onclick="showAddCMS();">New CMS</a></div>
-						<div id="buttonEnableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="enableEditMode();">Edit CMS</a></div>
-						<div id="buttonDisableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="disableEditMode();">Leave edit mode</a></div>
-					</div>
+				<div id="normalbuttons">
+					<div id="button1"><a href="#" style="display:block; height:100%; width:100%;" onclick="showAddCMS();">New CMS</a></div>
+					<div id="buttonEnableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="enableEditMode();">Edit CMS</a></div>
+					<div id="buttonDisableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="disableEditMode();">Leave edit mode</a></div>
+				</div>
 					<!--<div id="tweets">Loadin</div>-->
-				</div> 
+			</div> 
 
 				
 		</div>

@@ -5,8 +5,9 @@
 }
 
 
-body{
-background: url("../images/emptyscreen_logo.png") no-repeat center  #EBEBE7;
+body, html{
+    height:100%;
+background: url("../images/emptyscreen_logo.png") no-repeat center center  #EBEBE7;
 }
 
 
@@ -236,5 +237,16 @@ button.camera-control:hover {
 }
 #cancelCmsAdd{
     width:24.9%;
+}
+#labels{
+    text-align: right;
+    float:left;
+    width:45%
+}
+#inputs{
+    text-align: center;
+    margin-left:1%;
+    float:left;
+    width:10%
 }
 
