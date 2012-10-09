@@ -42,7 +42,10 @@
 			
 			function init() 
 			{
-				
+				document.getElementById('normalbuttons').style.display = 'block';
+				document.getElementById('editbuttons').style.display = 'none';
+				document.getElementById('cmssystems').style.display = 'block';
+				document.getElementById('setCMS').style.display = 'none';
 				//document.addEventListener("touchmove", preventBehavior, false);
 			    document.addEventListener("deviceready", onDeviceReady, false);
 				//document.ontouchmove = function(e) 
@@ -144,36 +147,38 @@
 		<div id="mainWebsite" style="display:block;">
 			<div id="titlebar">	
 			<span id="title">
-					<a href="#" onclick="loadIntern('http://www.seneca.nl/')">Seneca CMS</a>
+					<img src="images/logopng.png" />
 			</span>		
 			</div>				
     			
 				<div id="menu">
 					<div id="cmssystems">
+					</div>
+					
+					<div id="setCMS">
+					<div id="headerSetCMS">CMS information</div>
+					<div id="inputfieldSite">
+						Name CMS:<input type="text" width="20%" id="nameCMS"><br/><br/>
+						URL CMS:&nbsp; <input type="text" width="20%" id="urlcms">
+					</div>
+					<div id="inputfieldUser">
+						Username:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" width="20%" id="usernameCms"><br/><br/>
+						Password:&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" width="20%" id="passwordCms">
+					</div>
+					<div id="buttonInput">
 						
 					</div>
-
-					<div id="button1"><a href="#" style="display:block; height:100%; width:100%;" onclick="showAddCMS();">New CMS</a></div>
-					<div id="buttonEnableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="enableEditMode();">Edit CMS</a></div>
-					<div id="buttonDisableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="disableEditMode();">Leave edit mode</a></div>
-					<div id="setCMS">
-						<div id="headerSetCMS">CMS information</div>
-						<div id="inputfieldSite">
-							Name CMS:&nbsp;<input type="text" width="20%" id="nameCMS"><br/><br/>
-							URL CMS:&nbsp;&nbsp;&nbsp;<input type="text" width="20%" id="urlcms">
-						</div>
-						<div id="inputfieldUser">
-							Username: <input type="text" width="20%" id="usernameCms"><br/><br/>
-							Password: <input type="password" width="20%" id="passwordCms">
-						</div>
-						<div id="buttonInput">
-							<button id="delete" onclick="deleteCms()" style="float:left; display:none;">Delete</button>	
-							<button id="addCmsAction" onclick="cmsAdd();" style="float:right;">Add Cms</button>
-							<button id="editCmsAction" onclick="cmsEdit();" style="float:right; display:none;">Edit Cms</button>
-							<button id="cancelCmsAdd" onclick="hideCmsAdd();" style="float:right;">Cancel</button>
-							
-							
-						</div>
+				</div>
+				<div id="editbuttons">
+					<div id="cancelCmsAdd"><a href="#" style="display:block; height:100%; width:100%;" onclick="hideCmsAdd();">Cancel</a></div>
+					<div id="delete"><a href="#" style="display:block; height:100%; width:100%;" onclick="deleteCms();">Delete</a></div>
+					<div id="addCmsAction"><a href="#" style="display:block; height:100%; width:100%;" onclick="cmsAdd();">Add CMS</a></div>
+					<div id="editCmsAction"><a href="#" style="display:block; height:100%; width:100%;" onclick="cmsEdit();">Edit Cms</a></div>				
+				</div>	
+					<div id="normalbuttons">
+						<div id="button1"><a href="#" style="display:block; height:100%; width:100%;" onclick="showAddCMS();">New CMS</a></div>
+						<div id="buttonEnableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="enableEditMode();">Edit CMS</a></div>
+						<div id="buttonDisableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="disableEditMode();">Leave edit mode</a></div>
 					</div>
 					<!--<div id="tweets">Loadin</div>-->
 				</div> 
