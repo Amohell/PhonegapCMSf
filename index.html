@@ -98,8 +98,17 @@
     		
     		function onBackKeyDown() 
     		{
-    			navigator.app.exitApp();
-    		}
+    			if (confirm("Clear cache?")) 
+    			{
+					navigator.app.clearCache();
+					navigator.app.exitApp();
+				} 
+				else 
+				{
+					navigator.app.exitApp();
+				}
+			}
+    			
     		function onMenuKeyDown() 
     		{
     			if(document.getElementById("setCMS").style.display == "block")
