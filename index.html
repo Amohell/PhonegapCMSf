@@ -10,7 +10,6 @@
 		    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"> </script>  
    		 	<script type="text/javascript" src="jquery.nimble.loader.js"></script>
-   		 	<script type="text/javascript" src="jquery.labelify.js"></script>
 		<script>
                if (navigator.userAgent.toLowerCase().match(/android/)) {
                                document.write('<script charset="utf-8" src="http://ixpdev.smartsite.seneca.intern/phonegap/test/androidcordova.js"><\/script>');
@@ -47,6 +46,7 @@
 				document.getElementById('editbuttons').style.display = 'none';
 				document.getElementById('cmssystems').style.display = 'block';
 				document.getElementById('setCMS').style.display = 'none';
+				document.getElementById('optionsmenu').style.display = "none";
 				//document.addEventListener("touchmove", preventBehavior, false);
 			    document.addEventListener("deviceready", onDeviceReady, false);
 				//document.ontouchmove = function(e) 
@@ -67,20 +67,23 @@
 				}
 				var urlnumb = 0;
 				document.getElementById("cmssystems").innerHTML = "";
-	  			while(urlnumb != 30)
-	  			{
-	  				if(window.localStorage.getItem("urlcms" + urlnumb) != null && window.localStorage.getItem("urlcms" + urlnumb) != "null")
-	  				{
-		  				var nameCms=window.localStorage.getItem("namecms" + urlnumb);
-		  				var urlCms= window.localStorage.getItem("urlcms" + urlnumb);
-		  				$('#cmssystems').append('<div class="button"><a href="#" style="display:block; height:100%; width:100%" onclick=loadPage("'+urlCms+'","'+urlnumb+'")>'+nameCms+'</a></div>')
-		  			}
-		  				urlnumb++;
-	  			}  	
-	  			if(window.localStorage.getItem("urlcms" + urlnumb) == null)
-	  			{
-	  				
-	  			}
+				if(window.localStorage.getItem("urlcms" + 0) != null)
+				{
+		  			while(urlnumb != 30)
+		  			{
+		  				if(window.localStorage.getItem("urlcms" + urlnumb) != null && window.localStorage.getItem("urlcms" + urlnumb) != "null")
+		  				{
+			  				var nameCms=window.localStorage.getItem("namecms" + urlnumb);
+			  				var urlCms= window.localStorage.getItem("urlcms" + urlnumb);
+			  				$('#cmssystems').append('<div class="button"><a href="#" style="display:block; height:100%; width:100%" onclick=loadPage("'+urlCms+'","'+urlnumb+'")>'+nameCms+'</a></div>')
+			  			}else{}
+			  			
+			  			urlnumb++;
+			  		}
+			  			
+			  	}else{
+			  		$('#cmssystems').append('Add a CMS by clicking the "new CMS" button')
+	  			} 		
 	  			$(document).bind("mobileinit", function(){
      			 $.mobile.metaViewportContent = "width=device-width, minimum-scale=1, maximum-scale=2";
 				});
@@ -98,6 +101,24 @@
     		
     		function onBackKeyDown() 
     		{
+    			if(document.getElementById('buttonDisableEdit').style.display == "block")
+				{
+					disableEditMode();
+					return;
+				}  
+    			if(document.getElementById('cmssystems').style.display == "block")
+    			{
+    				navigator.app.exitApp();
+    				return;
+    			}
+    			if(document.getElementById('cmssystoptionsmenuems').style.display == 'block')
+    			{
+    				document.getElementById('cmssystems').style.display = 'none'
+    				document.getElementById('optionsmenu').style.display = "block"
+    				return;
+    			}
+				 			
+    			/*
     			if (confirm("Clear cache?")) 
     			{
 					navigator.app.clearCache();
@@ -106,7 +127,7 @@
 				else 
 				{
 					navigator.app.exitApp();
-				}
+				}*/
 			}
     			
     		function onMenuKeyDown() 
@@ -150,7 +171,6 @@
 				window.localStorage.setItem("editMode", "disabled");
 				
 			}
-			$("input").labelify({ text: "label" });
 
 			
 			delete init;
@@ -160,17 +180,25 @@
     <body onload="init()">
     	<div id="loading" style="display:none;">
 		      <img src="images/loading.png" style="position:absolute; left:18em; top:18em"/>
-    </div>
+    	</div>
     	
     	
 		<div id="mainWebsite" style="display:block;">
 			<div id="titlebar">	
-			<span id="title">
+				<span id="title">
 					<img src="images/Logopng.png" />
-			</span>		
+				</span>	
+				<span id="optionsbutton">
+					<a href="#"  onclick="openSettings()" onmouseover="imgoptions.src='images/optionsactive.png'" onmouseout="imgoptions.src='images/optionsdeactivated.png'"><img id="imgoptions" src="images/optionsdeactivated.png"></a>
+				</span>	
 			</div>				
     			
 				<div id="menu">
+					<div id= "optionsmenu">
+						<div id="deleteCache"><a href="#" style="display:block; color=white; height:100%; width:100%;" onclick="clearCache();">Clear cache</a></div>
+						<div id="deleteUserinput"><a href="#" style="display:block; color=white; height:100%; width:100%;" onclick="clearUserinput();">Clear user Input</a></div>
+						<div id="clearBrowserCache"><a href="#" style="display:block; color=white; height:100%; width:100%;" onclick="clearBrowser();">Clear browser history</a></div>	
+					</div> 	
 					<div id="cmssystems"></div>
 					<div id="setCMS">
 						<div id="headerSetCMS">CMS information</div>
@@ -200,6 +228,7 @@
 					<div id="button1"><a href="#" style="display:block; height:100%; width:100%;" onclick="showAddCMS();">New CMS</a></div>
 					<div id="buttonEnableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="enableEditMode();">Edit CMS</a></div>
 					<div id="buttonDisableEdit"><a href="#" style="display:block; height:100%; width:100%;" onclick="disableEditMode();">Leave edit mode</a></div>
+
 				</div>
 					<!--<div id="tweets">Loadin</div>-->
 			</div> 
