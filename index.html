@@ -106,17 +106,24 @@
 					disableEditMode();
 					return;
 				}  
-    			if(document.getElementById('cmssystems').style.display == "block")
-    			{
-    				navigator.app.exitApp();
-    				return;
-    			}
-    			if(document.getElementById('cmssystoptionsmenuems').style.display == 'block')
+				if(document.getElementById('cmssystems').style.display == 'block')
     			{
     				document.getElementById('cmssystems').style.display = 'none'
     				document.getElementById('optionsmenu').style.display = "block"
     				return;
     			}
+    			if(document.getElementById('optionsmenu').style.display == 'block')
+    			{
+    				document.getElementById('cmssystems').style.display = 'block'
+    				document.getElementById('optionsmenu').style.display = "none"
+    				return;
+    			}
+    			if(document.getElementById('cmssystems').style.display == "block")
+    			{
+    				navigator.app.exitApp();
+    				return;
+    			}
+    			
 				 			
     			/*
     			if (confirm("Clear cache?")) 
