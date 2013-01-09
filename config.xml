@@ -4,7 +4,8 @@
         id = "com.amohell.TestforCMS"
         version = "1.0.0">
 
-<name>TestforCMS</name>
+<name>CMS Seneca</name>
+<icon src="senecaLogo.png" />
 
 <preference name="android-minSdkVersion" value="7" />
 <preference name="android-maxSdkVersion" value="15" />
