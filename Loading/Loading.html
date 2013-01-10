@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, height=device-height"> 
     	
     	 <script>
-		 alert("test")
                if (navigator.userAgent.toLowerCase().match(/android/)) {
-                               document.write('<script charset="utf-8" src="http://ixpdev.smartsite.seneca.intern/phonegap/test/androidcordova.js"><\/script>');
+						alert("android")
+                        document.write('<script charset="utf-8" src="http://ixpdev.smartsite.seneca.intern/phonegap/test/androidcordova.js"><\/script>');
                } else if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/)) {
                                document.write('<script charset="utf-8" src="http://ixpdev.smartsite.seneca.intern/phonegap/test/iphonecordova.js"><\/script>');
                }
