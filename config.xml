@@ -14,6 +14,7 @@
 <preference name="stay-in-webview" value="true" />
 
 <access origin="http://127.0.0.1*"/> <!-- allow local pages -->
+<access origin="http://ixpdev.smartsite.seneca.intern"></access>
 <access origin="http://ixpdev.smartsite.seneca.intern/mgr/*"></access>
 <access origin="http://ixpdev.smartsite.seneca.intern/1/*"></access>
 <access origin="http://ixpdev.smartsite.seneca.intern/*"></access>
